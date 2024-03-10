@@ -41,7 +41,7 @@ class UserInterface:
 
 def run():
     db = Database()
-    parser = SiteParser(["keyword1", "keyword2"])  # Замените на свои ключевые слова
+    parser = SiteParser(["keyword1", "keyword2"])  # klucheviye slova ot sayta chtob znat chto tam
     ui = UserInterface()
 
     while True:

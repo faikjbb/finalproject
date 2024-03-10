@@ -50,7 +50,7 @@ def run():
 
         if choice == 1:
             url = ui.get_user_input("Введите URL сайта: ")
-            keywords = ui.get_user_input("Enter keywords (разделенные запятой): ").split(',')
+            keywords = ui.get_user_input("Введите ключевые слова (разделенные запятой): ").split(',')
             db.add_site(url, keywords)
         elif choice == 2:
             db.clear_db()

@@ -1,8 +1,8 @@
-import requests
+import requests #importnuli request modeli
 import re
 
 class Database:
-    def __init__(self):
+    def __init__(self):  #constructor. init ispolzavan dla initizaciyi
         self.sites_db = []
 
     def add_site(self, url, keywords):
@@ -34,10 +34,10 @@ class UserInterface:
             print("")
 
     def display_menu(self):
-        print("1. Add site")
-        print("2. Clear database")
-        print("3. Perform search")
-        print("4. Exit")
+        print("1. Добавте Сайт")
+        print("2. Удалить дату")
+        print("3. Поиск")
+        print("4. Выход")
 
 def run():
     db = Database()
@@ -46,11 +46,11 @@ def run():
 
     while True:
         ui.display_menu()
-        choice = int(ui.get_user_input("Enter your choice: "))
+        choice = int(ui.get_user_input("Введите свой выбор: "))
 
         if choice == 1:
-            url = ui.get_user_input("Enter site URL: ")
-            keywords = ui.get_user_input("Enter keywords (comma-separated): ").split(',')
+            url = ui.get_user_input("Введите URL сайта: ")
+            keywords = ui.get_user_input("Enter keywords (разделенные запятой): ").split(',')
             db.add_site(url, keywords)
         elif choice == 2:
             db.clear_db()
@@ -63,5 +63,5 @@ def run():
         elif choice == 4:
             break
 
-if __name__ == "__main__":
+if __name__ == "__main__": #uslobviya v skripte proverayet esli eto v main script a ne imported esli pravelno to on zapustit kod
     run()
